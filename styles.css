@@ -13,6 +13,21 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
+body {
+  -webkit-user-select: none; /* Chrome, Safari, Opera */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* Allow text selection for specific elements if needed */
+#contact {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
 header {
   background: linear-gradient(45deg, #ff6f61, #de6262);
   color: #fff;
