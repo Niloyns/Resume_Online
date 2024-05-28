@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener('DOMContentLoaded', () => {
     const toggleSwitch = document.getElementById('dark-mode-toggle');
     const body = document.body;
@@ -9,6 +8,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectItems = document.querySelectorAll('#projects ul li');
     const projectLinks = document.querySelectorAll('#projects ul li a');
     const footer = document.querySelector('footer');
+
+    // Initialize dark mode as default
+    body.classList.add('dark-mode');
+    header.classList.add('dark-mode');
+    links.forEach(link => link.classList.add('dark-mode'));
+    sections.forEach(section => section.classList.add('dark-mode'));
+    skillItems.forEach(item => item.classList.add('dark-mode'));
+    projectItems.forEach(item => item.classList.add('dark-mode'));
+    projectLinks.forEach(link => link.classList.add('dark-mode'));
+    footer.classList.add('dark-mode');
+    toggleSwitch.checked = true;
 
     toggleSwitch.addEventListener('change', () => {
         if (toggleSwitch.checked) {
